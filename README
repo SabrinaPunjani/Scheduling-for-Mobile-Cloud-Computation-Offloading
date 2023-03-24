@@ -1,0 +1,88 @@
+
+BUILD INSTRUCTIONS
+
+The labs introduce and use discrete-event simulation to characterize various
+computer network scenarios. Code written in the C programming language is
+provided and is modified to perform various experiments.
+
+The provided simulation code should be runable using virtually any C/C++
+compiler. Some care is needed when compiling the code and importing it into
+various development systems. Here are some guidelines.
+
+First, download and unzip the provided files into a code directory. Then,
+depending on your OS, use the following instructions.
+
+1. WINDOWS
+
+If you need a C compiler, Microsoft offers their Visual C++ 2010 Express for
+free at http://www.visualstudio.com/downloads/download-visual-studio-vs. Other
+free versions are available to students.
+
+When using Microsoft Visual C++ Express, proceed as follows.  
+
+- Create a new "Project From Existing Code", i.e., File > New > Project From
+  Existing Code ...
+
+- Use "Visual C++" as the type of project you would like to create. Click Next.
+
+- Pick a Project file location and Project name. Then "Add files to the project
+  from these folders", pointing it to the unzipped code directory. Click Next
+  and make sure that you select the Project type to be "Console application
+  project". Then click Finish.
+
+- Click on the Solution Explorer tab to navigate through the source and header
+  files. You should be able to build the executable from the dropdown menus.
+
+- Once you build the executable, you can run it from inside Visual C++ Express
+  or you can run it directly from a console window.
+
+- You can also do the compiling/linking/running by starting the "Visual Studio
+  Command Prompt", i.e., Tools > Visual Studio Command Prompt. Then use the
+  cl.exe compiler, i.e., inside the command window, navigate to your unzipped
+  code directory and "cl.exe *.c" will build an executable (It will have a .exe
+  extension). Then run it from the command window.
+
+2. OS X (Mac)
+
+If you have a Mac, you may want to use the Xcode integrated development
+environment, which is available free with OS X. You will have to install it
+from the App Store. The command line compiler tools are also part of
+Xcode. Then proceed as follows:
+
+- Start Xcode. Then "Create a new Xcode project". Choose an "OS X Application",
+  "Command Line Tool" project template. Then pick a project name and Type
+  "C". Then choose a directory location and create it. You will have to fill in
+  various other boxes.
+
+- Delete the main.c file that is created by Xcode (i.e., "Remove Reference").
+
+- Go to File > "Add files to ...", and import all the files from the unzipped
+  code directory (you can select the directory to import them all). You can
+  "Create groups for any added folders". Make sure that the "Add to targets"
+  check box is selected. You should be able to Build and Run. Make sure that
+  you open the Debug Console since program output will appear there.
+
+3. OS X (Mac) or Linux
+
+If you are using Linux or a Mac, you can build in a terminal window, i.e., on
+the Mac, open Utilities > Terminal window. Then on a Mac or Linux, cd to your
+code directory and use "cc *.c -Wall -lm". Then run the executable file, i.e.,
+type ./a.out. Alternately, you can use the provided Makefile. It is located in
+the "makefiles" subdirectory. Copy it to the code directory and type "make
+clean; make" in the code directory. You can then run the executable by typing
+"./run". Another Linux alternative is to use cmake. In this option, copy
+"CMakeLists.txt" from the makefiles directory to the code directory, then type
+"cmake ." followed by "make". This should produce the "run" executable.
+
+4. Windows, OS X (Mac) or Linux
+
+Another option is to use Netbeans (with C/C++ support), which is a free
+Java-based cross-platform integrated development system. Instructions for
+installation can be found online at http://netbeans.org. This can be done with
+GNU gcc/g++ compiler support (which can be easily installed on OS X and Linux),
+or via cygwin or MinGW on Windows. The latter is a more complex installation,
+but doable. In this case you will need to use the provided Makefile or
+CMakeLists.txt
+
+Let me know if you experience any problems compiling or running the code.
+

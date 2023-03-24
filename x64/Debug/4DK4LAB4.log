@@ -1,0 +1,10 @@
+﻿  channel.c
+  cleanup.c
+  main.c
+  output.c
+  packet_arrival.c
+  packet_duration.c
+  packet_transmission.c
+  simlib.c
+  Generating Code...
+  4DK4LAB4.vcxproj -> C:\Users\sabri\OneDrive\Documents\Eng 4\4DK4\Lab5\4DK4-Lab-4-Expiriment-5\4DK4-Lab-4-Expiriment-5\x64\Debug\4DK4LAB5Q1.exe
